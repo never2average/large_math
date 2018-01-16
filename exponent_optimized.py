@@ -8,14 +8,16 @@ elif y=='1':
 elif y=='0':
     print("1")
 else:
-    inter1=float(y)*(len(x)-1+math.log(float(x[0]+"."+x[1]+x[2])))
+    inter1=float(y)*(len(x)-1+math.log10(float(x[0]+"."+x[1]+x[2])))
+    print(inter1)
     if inter1>0:
         power=math.floor(inter1)
-        mantissa=power-inter1
-        answer=str(math.exp(mantissa))+"e^"+str(power)
-    elif inter1<0:
-        power=math.ceil(inter1)-1
         mantissa=inter1-power
-        answer=str(math.exp(mantissa))+"e^"+str(power)        
+        answer=str(10**mantissa)+"*10^"+str(power)
+    elif inter1<0:
+        power=math.floor(inter1)
+        print(power)
+        mantissa=inter1-power
+        answer=str(10**mantissa)+"*10^"+str(power)        
 
     print(answer)
