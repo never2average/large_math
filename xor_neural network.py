@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 import numpy as np
 import random
-
+__author__="Priyesh Srivastava"
+#print(__author__)
 
 """
 Creating the neural network for an xor gate trained by back propogation
